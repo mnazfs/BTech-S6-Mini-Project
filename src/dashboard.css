@@ -1,0 +1,242 @@
+.grid-container {
+    flex-direction: column; 
+    align-items: center;
+    background: rgba(255, 255, 255, 0.25);
+    padding: 30px;
+    border-radius: 30px;
+    text-align: center;
+    justify-content: center;
+    position: fixed;
+    z-index: 1;
+    width: 400px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    width: 100%;
+    max-width: 600px;
+    margin: auto;
+  }
+  .grid-container:hover {
+    transform: translate(-50%, -50%) scale(1.05);
+    box-shadow: 0px 15px 30px rgba(0, 0, 0, 1);
+  }
+  
+  html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .dashboard-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start; /* Changed from 'start' to 'flex-start' */
+    width: auto;
+    height: auto;
+    padding: 20px;
+    font-family: "Poppins", sans-serif;
+}
+
+.dashboard-container h2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+}
+
+  
+  .left-section,
+  .center-section,
+  .right-section {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    padding: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 20px;
+    overflow-y: auto;
+  }
+  
+  .left-section {
+    width: 25%;
+  }
+  
+  .center-section {
+    width: 50%;
+  }
+  
+  .right-section {
+    width: 20%;
+  }
+  
+  section {
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .e-pass-box {
+    width: auto;
+    max-width: 400px;
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+    font-family: "Poppins", sans-serif;
+    color: #333;
+    margin: 20px auto;
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center align content */
+    text-align: center; /* Align text centrally */
+    transition: all 0.3s ease-in-out;
+}
+
+.e-pass-box:hover {
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    transform: scale(1.03);
+}
+
+.e-pass-box .photo {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 3px solid #f7f706;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 15px; /* Adds spacing between the image and details */
+}
+
+.e-pass-box .photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.e-pass-box .photo:hover img {
+    transform: scale(1.1);
+}
+
+.e-pass-box .content {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center align labels */
+    width: 100%;
+}
+
+.e-pass-box .detail {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 300px;
+    margin-bottom: 12px;
+    padding: 8px 0;
+    text-align: left;
+}
+
+.e-pass-box .detail label {
+    font-weight: bold;
+    color: #555;
+    flex: 1;
+}
+
+.e-pass-box .detail span {
+    color: #333;
+    font-size: 1rem;
+    font-weight: 400;
+    flex: 2;
+    text-align: right;
+}
+
+.section-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 60px;
+    text-align: center;
+}
+
+.bus-tracking-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  padding: 10px;
+  position: relative;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background: rgba(255, 255, 255, 0.25);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+th, td {
+  border: 1px solid #ddd;
+  padding: 12px;
+  text-align: center;
+}
+
+th {
+  background-color: rgba(255, 255, 255, 0.25);
+  color:qwhite;
+}
+
+.bus-number {
+  cursor: pointer;
+  font-weight: bold;
+  color: #007bff;
+  transition: color 0.3s ease-in-out;
+}
+
+.bus-number:hover {
+  color: #ff5733;
+}
+
+/* Hover Box for Stops */
+.hover-box {
+  position: absolute;
+  top: 100px; /* Adjust based on layout */
+  left: 50%;
+  transform: translateX(-50%);
+  width: 250px;
+  background: white;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  text-align: left;
+  z-index: 10;
+}
+
+.hover-box h4 {
+  margin-bottom: 10px;
+  font-size: 1.1rem;
+  text-align: center;
+}
+
+.hover-box ul {
+  padding: 0;
+  list-style-type: none;
+}
+
+.hover-box li {
+  padding: 5px 0;
+  font-size: 0.9rem;
+}
